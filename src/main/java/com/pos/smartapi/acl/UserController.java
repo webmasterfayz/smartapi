@@ -12,16 +12,16 @@ public class UserController {
     }
     @GetMapping("/details/{userId}")
     public String getUser(){
-        return "details user";
+        return "User Details";
+    }
+    @PostMapping("/save")
+    public String saveUser() {
+        return "User Save";
     }
     @PutMapping("/update/{userId}")
     public String updateUser(@PathVariable Long userId){
-        return "update user";
+        return "User Update";
     }
-//    @DeleteMapping("/delete/{userId}")
-//    public ResponseEntity<Object> deleteUser(@PathVariable Long userId) {
-//        return userService.deleteUser(userId);
-//    }
     @DeleteMapping("/delete/{userId}")
     public String deleteUser(@PathVariable Long userId){
         return "delete user";
