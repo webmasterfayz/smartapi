@@ -11,7 +11,7 @@ public class UserController {
         return "All Users";
     }
     @GetMapping("/details/{userId}")
-    public String getUser(){
+    public String getUser(@PathVariable Long userId){
         return "User Details";
     }
     @PostMapping("/save")
